@@ -1,0 +1,30 @@
+#!/usr/bin/env node
+
+let program = require('commander');
+let packages = require('../package.json');
+let init = require('./init.js');
+let list = require('./list.js');
+
+program
+    .version(packages.version)
+    .usage('<command> [options]');
+
+program.command('init (template)')
+    .description("创建新项目")
+    .alias('i')
+    .action(function(template){
+        init(template)
+    })
+
+program.command('list')
+    .description('显示可使用的模板')
+    .alias('l')
+    .action(function(){
+        list();
+    })
+
+program.parse(process.argv);
+
+if(program.args.length===0){
+    program.help();
+}
