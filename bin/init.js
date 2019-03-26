@@ -68,6 +68,10 @@ function startBuildProject(spanner,projectName){
     util.copyDirSync(path.join(__dirname,'download'),targetPath);
     console.log('  ','--------------------');
     console.log('  ',chalk.green('★'),chalk.green('项目构建成功'));
+    console.log(`
+        ${chalk.green('cd'+projectName)}
+        ${chalk.green('npm install')}
+    `)
     spanner.stop();
     process.exit(0);
 }

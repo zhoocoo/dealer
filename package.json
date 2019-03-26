@@ -1,22 +1,23 @@
 {
-  "name": "dealer",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "autodealer",
+  "version": "1.0.2",
+  "description": "较好的自动化工具和前端架构集合",
+  "main": "bin/dlr",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
-  "devDependencies": {
+  "devDependencies": {},
+  "bin": {
+    "dlr": "bin/dlr"
+  },
+  "dependencies": {
     "chalk": "^2.4.2",
     "co": "^4.6.0",
     "co-prompt": "^1.0.0",
     "commander": "^2.19.0",
     "download-git-repo": "^1.1.0",
-    "ora": "^3.1.0"
-  },
-  "bin": {
-    "dlr": "bin/dlr"
+    "ora": "^3.2.0"
   }
 }
